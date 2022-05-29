@@ -1,0 +1,38 @@
+html,body,#root{
+     background-color:#222;
+     @apply text-white w-screen min-h-screen
+}
+
+
+
+.input{
+  @apply py-2 px-4 border rounded transition outline-none 
+  @apply bg-neutral-900  hover:bg-neutral-800 focus:outline-neutral-300 
+}
+.input--invalid{
+  @apply  focus:outline-red-600 placeholder:text-red-400
+}
+
+.input--disabled{
+  @apply bg-neutral-800  
+}
+
+.input-text{
+  @apply  text-neutral-100
+}
+.input-text--invalid{
+  @apply  text-red-400
+}
+.input-text--disabled{
+  @apply text-neutral
+}
+
+.input-border{
+  @apply border-neutral-400
+}
+.input-border--invalid{
+  @apply  border-red-500
+}
+.input-border--disabled{
+  @apply border-neutral
+}
