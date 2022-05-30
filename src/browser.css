@@ -1,0 +1,4 @@
+html,body,#root{
+    background-color:#1e1e21;
+    @apply text-white w-screen min-h-screen
+}

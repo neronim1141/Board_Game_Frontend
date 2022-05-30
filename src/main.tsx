@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import './browser.css';
 import './index.css';
 import '@unocss/reset/tailwind.css';
 import axios from 'axios';
@@ -20,7 +21,6 @@ const prepare = async () => {
 };
 
 const root = document.getElementById('root');
-document.body.className = 'bg-light dark:bg-dark';
 
 if (root) {
   prepare().then(() => {
