@@ -1,8 +1,11 @@
 export type UiVariant = 'red' | 'light';
+export type UiSize = 'sm' | 'md' | 'lg';
 export type InputClassType = {
+  name?: string;
   disabled?: boolean;
   invalid?: boolean;
   className?: string;
+  size?: UiSize;
 };
 
 export type ControlledInput = {

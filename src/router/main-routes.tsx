@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import { Route, Routes } from 'react-router-dom';
 import { ForbiddenPage, HomePage, NotFoundPage } from '../pages';
 import { ProtectedRoute } from './protected-route';

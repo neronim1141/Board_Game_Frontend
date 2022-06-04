@@ -1,4 +1,4 @@
-import { ComponentProps } from 'react';
+import React, { ComponentProps } from 'react';
 import { Controller, useFormContext } from 'react-hook-form';
 import { useField } from '../../utils/contexts/form/form';
 import { Input as InputBase } from '../atoms/controls/input';

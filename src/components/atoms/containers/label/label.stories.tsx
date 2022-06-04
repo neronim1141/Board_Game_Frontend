@@ -1,22 +1,21 @@
 import * as React from 'react';
 
 import { Story, Meta } from '@storybook/react';
-
-import { Input, InputProps } from './Input';
+import { Label, LabelProps } from './label';
 
 // More on default export: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: 'Atoms/Controls',
-  component: Input,
+  title: 'Atoms/Containers/Label',
+  component: Label,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
-  argTypes: {
-    onChange: { action: 'changed' }
+  args: {
+    children: 'Label'
   },
   parameters: {
     controls: { expanded: true }
   }
-} as Meta<InputProps>;
+} as Meta<LabelProps>;
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
-const DefaultTemplate: Story<InputProps> = (args) => <Input {...args} className="w-90" />;
-export const _Input = DefaultTemplate.bind({});
+const DefaultTemplate: Story<LabelProps> = (args) => <Label {...args} />;
+export const _Label = DefaultTemplate.bind({});

@@ -1,20 +1,32 @@
+import React, { InputHTMLAttributes } from 'react';
+
 import { forwardRef } from 'react';
 import clsx from 'clsx';
-import { InputHTMLAttributes } from 'react';
 import { InputClassType } from '../../../types';
 
-export type InputProps = InputHTMLAttributes<HTMLInputElement> & InputClassType;
-
+export type InputProps = Omit<
+  InputHTMLAttributes<HTMLInputElement>,
+  'size' | 'disabled' | 'placeholder'
+> &
+  InputClassType & {
+    placeholder?: string;
+  };
 export const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ name = '', className, invalid, disabled = false, placeholder, ...props }, ref) => {
+  (
+    { name = '', className, size = 'md', invalid, disabled = false, placeholder, ...props },
+    ref
+  ) => {
     return (
       <input
         className={clsx(
-          'input ',
+          'input',
           {
-            'input-text input-border': !disabled && !invalid,
-            'input--invalid input-text--invalid input-border--invalid': invalid,
-            'input--disabled input-text--disabled input-border--disabled': disabled
+            'input--sm': size === 'sm',
+            'input--lg': size === 'lg'
+          },
+          {
+            'input--invalid': invalid,
+            'input--disabled': disabled
           },
           className
         )}

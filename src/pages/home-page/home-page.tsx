@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import axios from 'axios';
 import { useQuery } from 'react-query';
 
@@ -6,7 +8,7 @@ export const HomePage = () => {
   if (!data) return <>loading</>;
   return (
     <>
-      <span>{data}</span>
+      <span className="bg-dupa text-2xs">{data}</span>
     </>
   );
 };
