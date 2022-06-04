@@ -12,7 +12,7 @@ html,body,#root{
 .input--invalid{
   @apply focus:outline-red-600 placeholder:text-red-400;
   @apply text-red-400;
-  box-shadow:0px 0px 8px 1px #DC2626
+  box-shadow:0px 0px 4px 1px #DC2626
 
 }
 
