@@ -11,7 +11,7 @@ export default {
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {
     label: 'Label',
-    helperText: 'need help?',
+    helper: 'need help?',
     required: false
   },
   argTypes: {},

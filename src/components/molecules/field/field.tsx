@@ -4,9 +4,9 @@ import { ErrorMessage } from '../../atoms/containers/error-message/error-message
 import { Label } from '../../atoms/containers/label/label';
 
 export type FieldProps = {
-  label: string;
+  label: ReactNode;
   labelFor?: string;
-  helperText?: string;
+  helper?: ReactNode;
   errorMessage?: string;
   required?: boolean;
   children: ReactNode;
@@ -15,7 +15,7 @@ export type FieldProps = {
 export const Field = ({
   label,
   labelFor,
-  helperText,
+  helper,
   errorMessage,
   required,
   children
@@ -27,7 +27,7 @@ export const Field = ({
           <Label labelFor={labelFor} required={required}>
             {label}
           </Label>
-          {helperText && <span className="text-xs">0/20</span>}
+          {helper && <span className="text-xs">{helper}</span>}
         </div>
         {children}
         {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
