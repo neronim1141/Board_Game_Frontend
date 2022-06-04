@@ -8,11 +8,12 @@ export default {
   component: Input,
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   args: {
-    placeholder: 'text',
+    placeholder: undefined,
     disabled: false,
     invalid: false
   },
   argTypes: {
+    placeholder: { type: 'string' },
     onChange: { action: 'changed' }
   },
   parameters: {
