@@ -13,7 +13,7 @@
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
     "cli:tsc": "tsc",
-    "cli:lint": "eslint src/**/*.{ts,json}",
+    "cli:lint": "eslint src/**/*.{ts,tsx,json}",
     "cli:test": "vitest run",
     "commit": "cz",
     "storybook": "start-storybook -p 6006",

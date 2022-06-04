@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { FunctionComponent, ReactNode } from 'react';
 

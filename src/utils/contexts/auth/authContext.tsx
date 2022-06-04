@@ -1,3 +1,5 @@
+import * as React from 'react';
+
 import { createContext, FunctionComponent, ReactNode, useReducer } from 'react';
 import { useContextFallback } from '../context.utils';
 import { authReducer, AuthReducerState } from './authReducer';
