@@ -29,13 +29,13 @@ describe('Input', () => {
     render(<Input disabled />);
     expect(screen.getByRole('textbox')).toBeDisabled();
     expect(screen.getByRole('textbox')).toHaveAttribute('aria-disabled', 'true');
-    expect(screen.getByRole('textbox')).toHaveClass('input-text--disabled input-border--disabled');
+    expect(screen.getByRole('textbox')).toHaveClass('input--disabled');
   });
 
   it('should should be invalid', () => {
     render(<Input invalid />);
     expect(screen.getByRole('textbox')).toHaveAttribute('aria-invalid', 'true');
-    expect(screen.getByRole('textbox')).toHaveClass('input-text--invalid input-border--invalid');
+    expect(screen.getByRole('textbox')).toHaveClass('input--invalid ');
   });
 
   it('should call on change', async () => {

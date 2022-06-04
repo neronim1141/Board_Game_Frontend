@@ -1,3 +1,3 @@
 import * as React from 'react';
 
-export const NotFoundPage = () => 'Forbidden';
+export const NotFoundPage = () => <>Not Found</>;
