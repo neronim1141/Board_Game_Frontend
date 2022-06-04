@@ -17,7 +17,7 @@ html,body,#root{
 }
 
 .input--disabled{
-  @apply bg-neutral-800 ; 
+  @apply bg-neutral-800  placeholder:text-gray-700 ; 
   @apply text-neutral;
 
 }
