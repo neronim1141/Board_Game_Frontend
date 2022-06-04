@@ -10,7 +10,7 @@ import { Providers } from './appProviders';
 import { MainRoutes } from './router/main-routes';
 import { BrowserRouter } from 'react-router-dom';
 
-const baseUrl = import.meta.env.VITE_BASE_URL ?? 'localhost:3001';
+const baseUrl = import.meta.env.VITE_BASE_URL ?? 'http://localhost:3001';
 axios.defaults.baseURL = baseUrl;
 
 const prepare = async () => {
