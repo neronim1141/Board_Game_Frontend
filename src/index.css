@@ -1,34 +1,32 @@
 
+html,body,#root{
+  @apply text-white 
+}
 
 
 .input{
-  @apply p-2 border rounded transition outline-none 
-  @apply bg-neutral-900  hover:bg-neutral-800 focus:outline-neutral-300 
+  @apply rounded transition outline-none text-white placeholder:text-gray-600 outline-none;
+  @apply p-2 text-base;
+  @apply bg-neutral-900  hover:bg-neutral-800 focus:outline-neutral-300; 
 }
 .input--invalid{
-  @apply focus:outline-red-600 placeholder:text-red-400
+  @apply focus:outline-red-600 placeholder:text-red-400;
+  @apply text-red-400;
+  box-shadow:0px 0px 8px 1px #DC2626
+
 }
 
 .input--disabled{
-  @apply bg-neutral-800  
+  @apply bg-neutral-800 ; 
+  @apply text-neutral;
+
 }
 
-.input-text{
-  @apply text-neutral-100
+.input--sm{
+  @apply p-1 text-sm;
+
 }
-.input-text--invalid{
-  @apply text-red-400
-}
-.input-text--disabled{
-  @apply text-neutral
+.input--lg{
+  @apply p-3 text-lg;
 }
 
-.input-border{
-  @apply border-neutral-400
-}
-.input-border--invalid{
-  @apply border-red-500
-}
-.input-border--disabled{
-  @apply border-neutral
-}
