@@ -24,7 +24,7 @@ export default {
 const DefaultTemplate: Story<FieldProps> = (args) => {
   const id = useId();
   return (
-    <Field {...args} labelFor={id}>
+    <Field {...args} labelFor={id} className="bg-neutral-800 p-2 rounded">
       <Input id={id} invalid={!!args.errorMessage} />
     </Field>
   );

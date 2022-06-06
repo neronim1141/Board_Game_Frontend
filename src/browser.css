@@ -1,4 +1,3 @@
 html,body,#root{
-    background-color:#3e3e41;
     @apply w-screen min-h-screen
 }

@@ -18,4 +18,4 @@ export default {
 
 // More on component templates: https://storybook.js.org/docs/react/writing-stories/introduction#using-args
 const DefaultTemplate: Story<ErrorMessageProps> = (args) => <ErrorMessage {...args} />;
-export const _Label = DefaultTemplate.bind({});
+export const Error_Message = DefaultTemplate.bind({});

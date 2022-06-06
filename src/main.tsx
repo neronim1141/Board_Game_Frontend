@@ -2,10 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './browser.css';
 import './index.css';
-import '@unocss/reset/tailwind.css';
 import axios from 'axios';
 
-import 'uno.css';
 import { Providers } from './appProviders';
 import { MainRoutes } from './router/main-routes';
 import { BrowserRouter } from 'react-router-dom';

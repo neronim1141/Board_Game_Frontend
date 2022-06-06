@@ -1,3 +1,4 @@
+import clsx from 'clsx';
 import * as React from 'react';
 import { ReactNode } from 'react';
 import { ErrorMessage } from '../../atoms/containers/error-message/error-message';
@@ -10,6 +11,7 @@ export type FieldProps = {
   errorMessage?: string;
   required?: boolean;
   children: ReactNode;
+  className?: string;
 };
 
 export const Field = ({
@@ -18,20 +20,19 @@ export const Field = ({
   helper,
   errorMessage,
   required,
-  children
+  children,
+  className
 }: FieldProps) => {
   return (
-    <>
-      <div className="flex flex-col w-90">
-        <div className="flex justify-between items-end">
-          <Label labelFor={labelFor} required={required}>
-            {label}
-          </Label>
-          {helper && <span className="text-xs">{helper}</span>}
-        </div>
-        {children}
-        {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+    <div className={clsx('flex flex-col gap-1', className)}>
+      <div className="flex justify-between items-end ">
+        <Label labelFor={labelFor} required={required}>
+          {label}
+        </Label>
+        {helper && <span className="text-xs">{helper}</span>}
       </div>
-    </>
+      {children}
+      {errorMessage && <ErrorMessage>{errorMessage}</ErrorMessage>}
+    </div>
   );
 };

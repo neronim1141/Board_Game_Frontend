@@ -1,24 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 html,body,#root{
-  @apply text-white 
+  --tw-bg-opacity:1;
+  @apply  text-amber-400;
+  background-color: rgb(25 21 21 / var(--tw-bg-opacity));
 }
-
+@layer components{
 
 .input{
-  @apply rounded transition outline-none text-white placeholder:text-gray-600 outline-none;
-  @apply p-2 text-base;
-  @apply bg-neutral-900  hover:bg-neutral-800 focus:outline-neutral-300; 
+  @apply rounded transition outline-none p-2 text-base border;  
+  @apply text-amber-400 placeholder:text-amber-700;
+  @apply bg-neutral-700 hover:bg-neutral-600 border-amber-600  ;
+  @apply focus:outline-amber-600 hover:focus:outline-amber-500; 
 }
 .input--invalid{
-  @apply focus:outline-red-600 placeholder:text-red-400;
-  @apply text-red-400;
-  box-shadow:0px 0px 4px 1px #DC2626
+  @apply focus:outline-red-600 hover:focus:outline-red-500 placeholder:text-red-700 border-red-600;
+  @apply text-red-300;
 
 }
 
 .input--disabled{
-  @apply bg-neutral-800  placeholder:text-gray-700 ; 
-  @apply text-neutral;
+  @apply bg-neutral-800  placeholder:text-neutral-600 border-neutral-600 hover:bg-neutral-800 ; 
+  @apply text-neutral-500;
 
 }
 
@@ -30,3 +35,4 @@ html,body,#root{
   @apply p-3 text-lg;
 }
 
+}

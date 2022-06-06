@@ -1,6 +1,3 @@
-const Unocss = require('unocss/vite');
-const { mergeConfig } = require('vite');
-
 module.exports = {
   stories: ['../src/**/*.stories.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
   addons: [
@@ -13,12 +10,7 @@ module.exports = {
   core: {
     builder: '@storybook/builder-vite'
   },
-  viteFinal(config, { configType }) {
-    // return the customized config
-    return mergeConfig(config, {
-      plugins: [Unocss.default()]
-    });
-  },
+
   features: {
     storyStoreV7: true
   },

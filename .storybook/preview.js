@@ -1,7 +1,4 @@
-import '@unocss/reset/tailwind.css';
 import '../src/index.css';
-import 'uno.css';
-import 'virtual:unocss-devtools';
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -10,14 +7,5 @@ export const parameters = {
       color: /(background|color)$/i,
       date: /Date$/
     }
-  },
-  backgrounds: {
-    default: 'white',
-    values: [
-      {
-        name: 'white',
-        value: '#3e3e41'
-      }
-    ]
   }
 };
